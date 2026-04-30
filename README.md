@@ -71,8 +71,28 @@ public sealed class AirBrakeAction : WarThunderBindingAction
 
 Then add a corresponding entry to `manifest.json`.
 
+## Sharing with friends
+
+Build `.streamDeckPlugin` distributables (one per module folder under `plugin/`):
+
+```powershell
+./tools/pack.ps1 -Version 0.3.0
+```
+
+Each output file in `dist/` is a self-contained installer. A friend downloads
+the file, **double-clicks it**, and Stream Deck loads the module — no admin
+rights, no extra runtime install. See [INSTALL.md](INSTALL.md) for the
+end-user setup flow.
+
+## Module roadmap
+
+The eventual structure is one `.sdPlugin` per system category (Mechanisation,
+Radar - Air, Radar - Ground, Weapons - AA, etc.) — friends install only the
+modules they fly. See [CATEGORIES.md](CATEGORIES.md) for the full module
+taxonomy, icon system, and architecture plan.
+
 ## Status
 
-Pre-alpha. Designed for personal use; the goal is a generic data-driven binding action
-(one Stream Deck action with a dropdown PI populated from your `.blk`) so that
-"point at file → all bindings available" works without any code changes.
+Pre-alpha. Designed for personal use; current single plugin contains gear,
+flaps and air brake under "Mechanisation". Splitting into per-module
+extensions is in progress.
