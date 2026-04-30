@@ -66,15 +66,15 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 ### &#9992;&#65039; Aircraft
 
 <details>
-<summary><img src="https://img.shields.io/badge/Mechanisation-FFB450?style=for-the-badge&logoColor=white" alt="Mechanisation"/> &nbsp; gear, flaps, air brake, doors, hooks, VTOL &mdash; <b>10 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Mechanisation-10_actions-FFB450?style=for-the-badge&labelColor=2D2D2D" alt="Mechanisation - 10 actions"/></summary>
 
-<br/>
+> Gear, flaps, air brake, bay doors, cockpit doors, tail hook, WEP / boosters, VTOL.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
-| <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/gear_0.png" width="56"/> | Toggle Gear | `ID_GEAR` |
-| <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/flaps_0.png" width="56"/> | Toggle Flaps | `ID_FLAPS`, `ID_FLAPS_DOWN`, `ID_FLAPS_UP` |
-| <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/airbrake_0.png" width="56"/> | Air Brake | `ID_AIR_BRAKE` |
+| <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/gear.png" width="56"/> | Toggle Gear | `ID_GEAR` |
+| <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/flaps.png" width="56"/> | Toggle Flaps | `ID_FLAPS`, `ID_FLAPS_DOWN`, `ID_FLAPS_UP` |
+| <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/airbrake.png" width="56"/> | Air Brake | `ID_AIR_BRAKE` |
 | <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/air_reverse.png" width="56"/> | Air Reverse | `ID_AIR_REVERSE` |
 | <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/bay_door.png" width="56"/> | Bomb Bay Door | `ID_BAY_DOOR` |
 | <img src="plugin/com.blacksiroghost.wt.mechanisation.sdPlugin/Images/Actions/cockpit_door.png" width="56"/> | Cockpit Door | `ID_TOGGLE_COCKPIT_DOOR` |
@@ -86,9 +86,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Engine-FF8030?style=for-the-badge" alt="Engine"/> &nbsp; throttle, maneuverability mode &mdash; <b>3 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Engine-3_actions-FF8030?style=for-the-badge&labelColor=2D2D2D" alt="Engine - 3 actions"/></summary>
 
-<br/>
+> Throttle Max / Min, Maneuverability mode.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -99,9 +99,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Weapons%20%E2%80%93%20A--A-E05050?style=for-the-badge" alt="Weapons A-A"/> &nbsp; missiles, cannons, mguns, fire/lock/cycle &mdash; <b>12 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Weapons%20%E2%80%93%20A--A-12_actions-E05050?style=for-the-badge&labelColor=2D2D2D" alt="Weapons A-A - 12 actions"/></summary>
 
-<br/>
+> Missiles (AAM), cannons, MGuns, additional guns, target lock, weapon lock, shooting cycle, reload, fire-axis.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -121,9 +121,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Weapons%20%E2%80%93%20A--G-C040A0?style=for-the-badge" alt="Weapons A-G"/> &nbsp; AGM, ATGM, bombs, rockets, GBU, laser, BC &mdash; <b>15 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Weapons%20%E2%80%93%20A--G-15_actions-C040A0?style=for-the-badge&labelColor=2D2D2D" alt="Weapons A-G - 15 actions"/></summary>
 
-<br/>
+> AGM, ATGM, bombs, rockets (single & series), guided bombs (drop & lock), laser designator, ballistic computers, target lock / unlock.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -146,9 +146,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Countermeasures-F0D040?style=for-the-badge" alt="Countermeasures"/> &nbsp; flares, IR projector, smoke &mdash; <b>3 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Countermeasures-3_actions-F0D040?style=for-the-badge&labelColor=2D2D2D" alt="Countermeasures - 3 actions"/></summary>
 
-<br/>
+> Flares, IR projector, smoke screen.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -159,9 +159,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Radar%20%E2%80%93%20Air-50D070?style=for-the-badge" alt="Radar Air"/> &nbsp; sensor power, mode, range, scan, ACM, lock &mdash; <b>10 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Radar%20%E2%80%93%20Air-10_actions-50D070?style=for-the-badge&labelColor=2D2D2D" alt="Radar Air - 10 actions"/></summary>
 
-<br/>
+> Radar power, mode switch, range, scan pattern, ACM mode, target lock & switch, type switch, lock / unlock designation.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -179,9 +179,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Optics%20%26%20Pod-A070D0?style=for-the-badge" alt="Optics"/> &nbsp; thermal, NV, designate, lock at point, cue X/Y/Z &mdash; <b>16 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Optics%20%26%20Pod-16_actions-A070D0?style=for-the-badge&labelColor=2D2D2D" alt="Optics - 16 actions"/></summary>
 
-<br/>
+> Thermal polarity, night vision, designate target, lock at point, cue X / Y / Z (max / min / center), laser designator, target & UAV cameras.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -207,9 +207,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 ### &#128642; Helicopter
 
 <details>
-<summary><img src="https://img.shields.io/badge/Heli%20Mech-40C0A0?style=for-the-badge" alt="Heli Mech"/> &nbsp; gear, flaps, air brake &mdash; <b>4 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Heli%20Mechanisation-4_actions-40C0A0?style=for-the-badge&labelColor=2D2D2D" alt="Heli Mech - 4 actions"/></summary>
 
-<br/>
+> Helicopter gear, flaps Up / Down, air brake.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -221,9 +221,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Heli%20Combat-D05050?style=for-the-badge" alt="Heli Combat"/> &nbsp; fire, flares, rockets, BC, cycle &mdash; <b>14 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Heli%20Combat-14_actions-D05050?style=for-the-badge&labelColor=2D2D2D" alt="Heli Combat - 14 actions"/></summary>
 
-<br/>
+> Fire primary / secondary / MGuns / cannons / additional, rocket series, flares (single & series), ballistic computers, shooting cycle, instructor, exit cycle.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -245,9 +245,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Heli%20Sensors-60A0E0?style=for-the-badge" alt="Heli Sensors"/> &nbsp; NV, seeker, sensor lock, laser, TGT cam, cue X/Y &mdash; <b>11 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Heli%20Sensors-11_actions-60A0E0?style=for-the-badge&labelColor=2D2D2D" alt="Heli Sensors - 11 actions"/></summary>
 
-<br/>
+> Night vision, seeker camera, sensor switch & lock, laser designator, target camera, lock at point, cue X / Y axes.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -268,9 +268,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 ### &#128666; Tank
 
 <details>
-<summary><img src="https://img.shields.io/badge/Tank%20Movement-A07050?style=for-the-badge" alt="Tank Movement"/> &nbsp; direction driving, suspension up/down/pitch/roll/reset &mdash; <b>8 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Tank%20Movement-8_actions-A07050?style=for-the-badge&labelColor=2D2D2D" alt="Tank Movement - 8 actions"/></summary>
 
-<br/>
+> Direction driving toggle, suspension clearance up / down, pitch up / down, roll left / right, reset.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -286,9 +286,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Tank%20Combat-D05050?style=for-the-badge" alt="Tank Combat"/> &nbsp; fire, gun select, smoke, repair, hull aim, reload &mdash; <b>10 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Tank%20Combat-10_actions-D05050?style=for-the-badge&labelColor=2D2D2D" alt="Tank Combat - 10 actions"/></summary>
 
-<br/>
+> Fire secondary & special, gun selection (primary / secondary / MG / reset), smoke, repair, hull aiming, reload.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -306,9 +306,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Tank%20Sights-A0E040?style=for-the-badge" alt="Tank Sights"/> &nbsp; rangefinder, zoom, NV, thermal, fuse, sight distance &mdash; <b>11 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Tank%20Sights-11_actions-A0E040?style=for-the-badge&labelColor=2D2D2D" alt="Tank Sights - 11 actions"/></summary>
 
-<br/>
+> Rangefinder, targeting hold, zoom hold / toggle, crosshair light, night vision, fuse mode, thermal polarity, sight distance + / &minus; / set.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -327,9 +327,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Radar%20%E2%80%93%20Ground-88B040?style=for-the-badge" alt="Radar Ground"/> &nbsp; tank radar power/mode/range/scan/lock, IRCM, APS &mdash; <b>10 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Radar%20%E2%80%93%20Ground-10_actions-88B040?style=for-the-badge&labelColor=2D2D2D" alt="Radar Ground - 10 actions"/></summary>
 
-<br/>
+> Tank radar power, mode, range, scan, target lock & switch, view switch, weapon lock, IRCM, APS lock.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -349,9 +349,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 ### &#9875;&#65039; Naval
 
 <details>
-<summary><img src="https://img.shields.io/badge/Ship%20Combat-6090E0?style=for-the-badge" alt="Ship Combat"/> &nbsp; lock target, zoom (in development) &mdash; <b>2 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Ship%20Combat-2_actions-6090E0?style=for-the-badge&labelColor=2D2D2D" alt="Ship Combat - 2 actions"/></summary>
 
-<br/>
+> Lock target, ship zoom max. _(Naval module is in early development; more actions coming.)_
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -363,9 +363,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 ### &#127916; Cross-vehicle
 
 <details>
-<summary><img src="https://img.shields.io/badge/View%20%2F%20Camera-E080B0?style=for-the-badge" alt="View"/> &nbsp; toggle view, neutral, driver, binoculars, cameras &mdash; <b>10 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/View%20%2F%20Camera-10_actions-E080B0?style=for-the-badge&labelColor=2D2D2D" alt="View - 10 actions"/></summary>
 
-<br/>
+> Toggle view, helicopter view, camera neutral / down, driver / binoculars / target / UAV cameras, camera X / Y center.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -383,9 +383,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/Comms-5070D0?style=for-the-badge" alt="Comms"/> &nbsp; voice messages, PTT, squad designate, support, wheel menu &mdash; <b>11 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/Comms-11_actions-5070D0?style=for-the-badge&labelColor=2D2D2D" alt="Comms - 11 actions"/></summary>
 
-<br/>
+> Voice messages 1 / 2 / 5 / 7 / 8, push-to-talk, squad voice list, squad designate, support plane, plane orbit, multifunction wheel menu.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|
@@ -404,9 +404,9 @@ Each module ships as its own `.streamDeckPlugin`. Click any category below to se
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/HUD%20%26%20System-808090?style=for-the-badge" alt="HUD"/> &nbsp; HUD toggle, pause, screenshot, action bars, control mode &mdash; <b>17 actions</b></summary>
+<summary><img src="https://img.shields.io/badge/HUD%20%26%20System-17_actions-808090?style=for-the-badge&labelColor=2D2D2D" alt="HUD - 17 actions"/></summary>
 
-<br/>
+> Hide HUD, pause, screenshot, flight menu / setup, MP stats, instructor, action bar 5&ndash;9, continue, control mode (incl. UAV), shot frequency, exit cycle.
 
 | Icon | Action | War Thunder binding |
 |:---:|---|---|

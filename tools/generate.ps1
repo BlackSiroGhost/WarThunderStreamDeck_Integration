@@ -277,19 +277,21 @@ foreach ($m in $modules) {
         New-MonoIcon (Join-Path $pluginDir "Images\Plugin\categoryIcon$sfx.png") $s $modShort
     }
 
-    # Action icons
+    # Action icons -- every action gets a default <u>.png label icon (covers
+    # README inlines and Simple-action manifest entries). Telemetry actions
+    # additionally get <u>_0/<u>_1 dim/bright variants the deck UI flips between.
     foreach ($a in $m.Actions) {
-        if ($a.T -eq 'Simple') {
+        foreach ($s in @(72, 144)) {
+            $sfx = if ($s -eq 72) { '' } else { '@2x' }
+            New-KeyImage (Join-Path $pluginDir "Images\Actions\$($a.U)$sfx.png") $s $a.L $m.Accent
+        }
+
+        if ($a.T -ne 'Simple') {
+            $dim = @([int]($m.Accent[0] * 0.4), [int]($m.Accent[1] * 0.4), [int]($m.Accent[2] * 0.4))
             foreach ($s in @(72, 144)) {
                 $sfx = if ($s -eq 72) { '' } else { '@2x' }
-                New-KeyImage (Join-Path $pluginDir "Images\Actions\$($a.U)$sfx.png") $s $a.L $m.Accent
-            }
-        } else {
-            # Telemetry-driven: copy state-specific icons from mechanisation source
-            switch ($a.T) {
-                'GearTel'   { Copy-StateIcon $m $a 'gear_up.png'      'gear_down.png' }
-                'FlapsCyc'  { Copy-StateIcon $m $a 'flaps_up.png'     'flaps_down.png' }
-                'AirbrkTel' { Copy-StateIcon $m $a 'airbrake_in.png'  'airbrake_out.png' }
+                New-KeyImage (Join-Path $pluginDir "Images\Actions\$($a.U)_0$sfx.png") $s $a.L $dim
+                New-KeyImage (Join-Path $pluginDir "Images\Actions\$($a.U)_1$sfx.png") $s $a.L $m.Accent
             }
         }
     }
