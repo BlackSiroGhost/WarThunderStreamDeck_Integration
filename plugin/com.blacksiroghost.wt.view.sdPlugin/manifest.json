@@ -1,0 +1,98 @@
+﻿{
+  "Name": "WT - View",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - View - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - View",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.View.exe",
+  "CodePathWin": "WarThunderStreamDeck.View.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Toggle View",
+      "UUID": "com.blacksiroghost.wt.view.toggle",
+      "Icon": "Images/Actions/toggle",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_VIEW",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/toggle", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli View",
+      "UUID": "com.blacksiroghost.wt.view.toggle_heli",
+      "Icon": "Images/Actions/toggle_heli",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_VIEW_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/toggle_heli", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Camera Neutral",
+      "UUID": "com.blacksiroghost.wt.view.neutral",
+      "Icon": "Images/Actions/neutral",
+      "Tooltip": "Presses your binding for: ID_CAMERA_NEUTRAL",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/neutral", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "View Down",
+      "UUID": "com.blacksiroghost.wt.view.view_down",
+      "Icon": "Images/Actions/view_down",
+      "Tooltip": "Presses your binding for: ID_CAMERA_VIEW_DOWN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/view_down", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Driver Camera",
+      "UUID": "com.blacksiroghost.wt.view.driver",
+      "Icon": "Images/Actions/driver",
+      "Tooltip": "Presses your binding for: ID_CAMERA_DRIVER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/driver", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Binoculars",
+      "UUID": "com.blacksiroghost.wt.view.binoc",
+      "Icon": "Images/Actions/binoc",
+      "Tooltip": "Presses your binding for: ID_CAMERA_BINOCULARS",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/binoc", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Target Camera",
+      "UUID": "com.blacksiroghost.wt.view.tgt_cam",
+      "Icon": "Images/Actions/tgt_cam",
+      "Tooltip": "Presses your binding for: ID_TARGET_CAMERA",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/tgt_cam", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "UAV Camera",
+      "UUID": "com.blacksiroghost.wt.view.uav",
+      "Icon": "Images/Actions/uav",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_UAV_CAMERA",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/uav", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cam X Center",
+      "UUID": "com.blacksiroghost.wt.view.cam_x",
+      "Icon": "Images/Actions/cam_x",
+      "Tooltip": "Presses your binding for: camx_rangeSet",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cam_x", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cam Y Center",
+      "UUID": "com.blacksiroghost.wt.view.cam_y",
+      "Icon": "Images/Actions/cam_y",
+      "Tooltip": "Presses your binding for: camy_rangeSet",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cam_y", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

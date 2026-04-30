@@ -1,0 +1,114 @@
+﻿{
+  "Name": "WT - Tank Move",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Tank Move - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Tank Move",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.TankMovement.exe",
+  "CodePathWin": "WarThunderStreamDeck.TankMovement.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Direction Driving",
+      "UUID": "com.blacksiroghost.wt.tank.movement.dir_drive",
+      "Icon": "Images/Actions/dir_drive",
+      "Tooltip": "Presses your binding for: ID_ENABLE_GM_DIRECTION_DRIVING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/dir_drive", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Suspension Up",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_clr_up",
+      "Icon": "Images/Actions/susp_clr_up",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_CLEARANCE_UP",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_clr_up", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Suspension Down",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_clr_dn",
+      "Icon": "Images/Actions/susp_clr_dn",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_CLEARANCE_DOWN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_clr_dn", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Pitch Up",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_pit_up",
+      "Icon": "Images/Actions/susp_pit_up",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_PITCH_UP",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_pit_up", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Pitch Down",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_pit_dn",
+      "Icon": "Images/Actions/susp_pit_dn",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_PITCH_DOWN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_pit_dn", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Roll Right",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_rol_up",
+      "Icon": "Images/Actions/susp_rol_up",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_ROLL_UP",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_rol_up", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Roll Left",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_rol_dn",
+      "Icon": "Images/Actions/susp_rol_dn",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_ROLL_DOWN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_rol_dn", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Suspension Reset",
+      "UUID": "com.blacksiroghost.wt.tank.movement.susp_reset",
+      "Icon": "Images/Actions/susp_reset",
+      "Tooltip": "Presses your binding for: ID_SUSPENSION_RESET",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/susp_reset", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Steering Right",
+      "UUID": "com.blacksiroghost.wt.tank.movement.steer_max",
+      "Icon": "Images/Actions/steer_max",
+      "Tooltip": "Presses your binding for: gm_steering_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/steer_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Steering Left",
+      "UUID": "com.blacksiroghost.wt.tank.movement.steer_min",
+      "Icon": "Images/Actions/steer_min",
+      "Tooltip": "Presses your binding for: gm_steering_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/steer_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Throttle Max",
+      "UUID": "com.blacksiroghost.wt.tank.movement.thr_max",
+      "Icon": "Images/Actions/thr_max",
+      "Tooltip": "Presses your binding for: gm_throttle_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/thr_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Throttle Min",
+      "UUID": "com.blacksiroghost.wt.tank.movement.thr_min",
+      "Icon": "Images/Actions/thr_min",
+      "Tooltip": "Presses your binding for: gm_throttle_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/thr_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

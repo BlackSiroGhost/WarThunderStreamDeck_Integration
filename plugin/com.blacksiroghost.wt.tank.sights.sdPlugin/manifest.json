@@ -1,0 +1,106 @@
+﻿{
+  "Name": "WT - Tank Sights",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Tank Sights - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Tank Sights",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.TankSights.exe",
+  "CodePathWin": "WarThunderStreamDeck.TankSights.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Rangefinder",
+      "UUID": "com.blacksiroghost.wt.tank.sights.rangefinder",
+      "Icon": "Images/Actions/rangefinder",
+      "Tooltip": "Presses your binding for: ID_RANGEFINDER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/rangefinder", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Targeting Hold",
+      "UUID": "com.blacksiroghost.wt.tank.sights.targ_hold",
+      "Icon": "Images/Actions/targ_hold",
+      "Tooltip": "Presses your binding for: ID_TARGETING_HOLD_GM",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/targ_hold", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Zoom Hold",
+      "UUID": "com.blacksiroghost.wt.tank.sights.zoom_hold",
+      "Icon": "Images/Actions/zoom_hold",
+      "Tooltip": "Presses your binding for: ID_ZOOM_HOLD_GM",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/zoom_hold", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Zoom Toggle",
+      "UUID": "com.blacksiroghost.wt.tank.sights.zoom_toggle",
+      "Icon": "Images/Actions/zoom_toggle",
+      "Tooltip": "Presses your binding for: ID_ZOOM_TOGGLE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/zoom_toggle", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Crosshair Light",
+      "UUID": "com.blacksiroghost.wt.tank.sights.xhair_light",
+      "Icon": "Images/Actions/xhair_light",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_GM_CROSSHAIR_LIGHTING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/xhair_light", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank NV",
+      "UUID": "com.blacksiroghost.wt.tank.sights.tank_nv",
+      "Icon": "Images/Actions/tank_nv",
+      "Tooltip": "Presses your binding for: ID_TANK_NIGHT_VISION",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/tank_nv", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Fuse Mode",
+      "UUID": "com.blacksiroghost.wt.tank.sights.fuse_mode",
+      "Icon": "Images/Actions/fuse_mode",
+      "Tooltip": "Presses your binding for: ID_TANK_SWITCH_FUSE_MODE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fuse_mode", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Thermal Polarity",
+      "UUID": "com.blacksiroghost.wt.tank.sights.thermal",
+      "Icon": "Images/Actions/thermal",
+      "Tooltip": "Presses your binding for: ID_THERMAL_WHITE_IS_HOT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/thermal", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Sight Distance +",
+      "UUID": "com.blacksiroghost.wt.tank.sights.sight_max",
+      "Icon": "Images/Actions/sight_max",
+      "Tooltip": "Presses your binding for: gm_sight_distance_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sight_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Sight Distance -",
+      "UUID": "com.blacksiroghost.wt.tank.sights.sight_min",
+      "Icon": "Images/Actions/sight_min",
+      "Tooltip": "Presses your binding for: gm_sight_distance_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sight_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Sight Distance =",
+      "UUID": "com.blacksiroghost.wt.tank.sights.sight_set",
+      "Icon": "Images/Actions/sight_set",
+      "Tooltip": "Presses your binding for: gm_sight_distance_rangeSet",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sight_set", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

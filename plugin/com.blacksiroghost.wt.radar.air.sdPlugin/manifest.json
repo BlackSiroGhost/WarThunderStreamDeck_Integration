@@ -1,0 +1,98 @@
+﻿{
+  "Name": "WT - Radar Air",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Radar Air - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Radar Air",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.RadarAir.exe",
+  "CodePathWin": "WarThunderStreamDeck.RadarAir.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Radar Power",
+      "UUID": "com.blacksiroghost.wt.radar.air.sensor_switch",
+      "Icon": "Images/Actions/sensor_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sensor_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Mode Switch",
+      "UUID": "com.blacksiroghost.wt.radar.air.mode_switch",
+      "Icon": "Images/Actions/mode_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_MODE_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/mode_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Range Switch",
+      "UUID": "com.blacksiroghost.wt.radar.air.range_switch",
+      "Icon": "Images/Actions/range_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_RANGE_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/range_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Scan Pattern",
+      "UUID": "com.blacksiroghost.wt.radar.air.scan_switch",
+      "Icon": "Images/Actions/scan_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_SCAN_PATTERN_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/scan_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "ACM Mode",
+      "UUID": "com.blacksiroghost.wt.radar.air.acm",
+      "Icon": "Images/Actions/acm",
+      "Tooltip": "Presses your binding for: ID_SENSOR_ACM_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/acm", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Target Lock",
+      "UUID": "com.blacksiroghost.wt.radar.air.target_lock",
+      "Icon": "Images/Actions/target_lock",
+      "Tooltip": "Presses your binding for: ID_SENSOR_TARGET_LOCK, ID_LOCK_TARGET, ID_LOCK_TARGETING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/target_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Target Switch",
+      "UUID": "com.blacksiroghost.wt.radar.air.target_switch",
+      "Icon": "Images/Actions/target_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_TARGET_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/target_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Type Switch",
+      "UUID": "com.blacksiroghost.wt.radar.air.type_switch",
+      "Icon": "Images/Actions/type_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_TYPE_SWITCH",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/type_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Lock Designation",
+      "UUID": "com.blacksiroghost.wt.radar.air.lock_des",
+      "Icon": "Images/Actions/lock_des",
+      "Tooltip": "Presses your binding for: ID_LOCK_TARGETING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/lock_des", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Unlock Designation",
+      "UUID": "com.blacksiroghost.wt.radar.air.unlock_des",
+      "Icon": "Images/Actions/unlock_des",
+      "Tooltip": "Presses your binding for: ID_UNLOCK_TARGETING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/unlock_des", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

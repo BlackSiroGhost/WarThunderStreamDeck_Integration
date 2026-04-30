@@ -1,0 +1,42 @@
+﻿{
+  "Name": "WT - Countermeasures",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Countermeasures - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Countermeasures",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.Countermeasures.exe",
+  "CodePathWin": "WarThunderStreamDeck.Countermeasures.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Flares",
+      "UUID": "com.blacksiroghost.wt.countermeasures.flares",
+      "Icon": "Images/Actions/flares",
+      "Tooltip": "Presses your binding for: ID_FLARES",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/flares", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "IR Projector",
+      "UUID": "com.blacksiroghost.wt.countermeasures.ir_proj",
+      "Icon": "Images/Actions/ir_proj",
+      "Tooltip": "Presses your binding for: ID_IR_PROJECTOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ir_proj", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Smoke Screen",
+      "UUID": "com.blacksiroghost.wt.countermeasures.smoke",
+      "Icon": "Images/Actions/smoke",
+      "Tooltip": "Presses your binding for: ID_SMOKE_SCREEN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/smoke", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+﻿{
+  "Name": "WT - Radar Ground",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Radar Ground - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Radar Ground",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.RadarGround.exe",
+  "CodePathWin": "WarThunderStreamDeck.RadarGround.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Tank Sensor Switch",
+      "UUID": "com.blacksiroghost.wt.radar.ground.sensor_switch",
+      "Icon": "Images/Actions/sensor_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sensor_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank Mode Switch",
+      "UUID": "com.blacksiroghost.wt.radar.ground.mode_switch",
+      "Icon": "Images/Actions/mode_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_MODE_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/mode_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank Range Switch",
+      "UUID": "com.blacksiroghost.wt.radar.ground.range_switch",
+      "Icon": "Images/Actions/range_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_RANGE_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/range_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank Scan Pattern",
+      "UUID": "com.blacksiroghost.wt.radar.ground.scan_switch",
+      "Icon": "Images/Actions/scan_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_SCAN_PATTERN_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/scan_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank Target Lock",
+      "UUID": "com.blacksiroghost.wt.radar.ground.target_lock",
+      "Icon": "Images/Actions/target_lock",
+      "Tooltip": "Presses your binding for: ID_SENSOR_TARGET_LOCK_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/target_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank Target Switch",
+      "UUID": "com.blacksiroghost.wt.radar.ground.target_switch",
+      "Icon": "Images/Actions/target_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_TARGET_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/target_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Tank View Switch",
+      "UUID": "com.blacksiroghost.wt.radar.ground.view_switch",
+      "Icon": "Images/Actions/view_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_VIEW_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/view_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Weapon Lock Tank",
+      "UUID": "com.blacksiroghost.wt.radar.ground.weapon_lock",
+      "Icon": "Images/Actions/weapon_lock",
+      "Tooltip": "Presses your binding for: ID_WEAPON_LOCK_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/weapon_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "IRCM Switch",
+      "UUID": "com.blacksiroghost.wt.radar.ground.ircm",
+      "Icon": "Images/Actions/ircm",
+      "Tooltip": "Presses your binding for: ID_IRCM_SWITCH_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ircm", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "APS Lock",
+      "UUID": "com.blacksiroghost.wt.radar.ground.aps_lock",
+      "Icon": "Images/Actions/aps_lock",
+      "Tooltip": "Presses your binding for: ID_LOCK_TARGETING_AT_POINT_SHIP",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/aps_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

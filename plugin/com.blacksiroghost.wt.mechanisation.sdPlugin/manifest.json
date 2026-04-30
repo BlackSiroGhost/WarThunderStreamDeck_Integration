@@ -1,0 +1,98 @@
+﻿{
+  "Name": "WT - Mechanisation",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Mechanisation - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Mechanisation",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.Mechanisation.exe",
+  "CodePathWin": "WarThunderStreamDeck.Mechanisation.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Toggle Gear",
+      "UUID": "com.blacksiroghost.wt.mechanisation.gear",
+      "Icon": "Images/Actions/gear_0",
+      "Tooltip": "Presses your binding for: ID_GEAR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/gear_0", "TitleAlignment": "bottom", "FontSize": "8" }, { "Image": "Images/Actions/gear_1", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Toggle Flaps",
+      "UUID": "com.blacksiroghost.wt.mechanisation.flaps",
+      "Icon": "Images/Actions/flaps_0",
+      "Tooltip": "Presses your binding for: ID_FLAPS, ID_FLAPS_DOWN, ID_FLAPS_UP",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/flaps_0", "TitleAlignment": "bottom", "FontSize": "8" }, { "Image": "Images/Actions/flaps_1", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Air Brake",
+      "UUID": "com.blacksiroghost.wt.mechanisation.airbrake",
+      "Icon": "Images/Actions/airbrake_0",
+      "Tooltip": "Presses your binding for: ID_AIR_BRAKE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/airbrake_0", "TitleAlignment": "bottom", "FontSize": "8" }, { "Image": "Images/Actions/airbrake_1", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Air Reverse",
+      "UUID": "com.blacksiroghost.wt.mechanisation.air_reverse",
+      "Icon": "Images/Actions/air_reverse",
+      "Tooltip": "Presses your binding for: ID_AIR_REVERSE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/air_reverse", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Bomb Bay Door",
+      "UUID": "com.blacksiroghost.wt.mechanisation.bay_door",
+      "Icon": "Images/Actions/bay_door",
+      "Tooltip": "Presses your binding for: ID_BAY_DOOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/bay_door", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cockpit Door",
+      "UUID": "com.blacksiroghost.wt.mechanisation.cockpit_door",
+      "Icon": "Images/Actions/cockpit_door",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_COCKPIT_DOOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cockpit_door", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Carrier Tail Hook",
+      "UUID": "com.blacksiroghost.wt.mechanisation.trans_gear",
+      "Icon": "Images/Actions/trans_gear",
+      "Tooltip": "Presses your binding for: ID_TRANS_GEAR_DOWN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/trans_gear", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Boosters / WEP",
+      "UUID": "com.blacksiroghost.wt.mechanisation.boosters",
+      "Icon": "Images/Actions/boosters",
+      "Tooltip": "Presses your binding for: ID_IGNITE_BOOSTERS",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/boosters", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "VTOL Up",
+      "UUID": "com.blacksiroghost.wt.mechanisation.vtol_up",
+      "Icon": "Images/Actions/vtol_up",
+      "Tooltip": "Presses your binding for: vtol_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/vtol_up", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "VTOL Down",
+      "UUID": "com.blacksiroghost.wt.mechanisation.vtol_down",
+      "Icon": "Images/Actions/vtol_down",
+      "Tooltip": "Presses your binding for: vtol_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/vtol_down", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

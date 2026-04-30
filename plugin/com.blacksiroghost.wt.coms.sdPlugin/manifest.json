@@ -1,0 +1,82 @@
+﻿{
+  "Name": "WT - Comms",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Comms - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Comms",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.Coms.exe",
+  "CodePathWin": "WarThunderStreamDeck.Coms.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Voice Msg 2",
+      "UUID": "com.blacksiroghost.wt.coms.voice2",
+      "Icon": "Images/Actions/voice2",
+      "Tooltip": "Presses your binding for: ID_VOICE_MESSAGE_2",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/voice2", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Voice Msg 7",
+      "UUID": "com.blacksiroghost.wt.coms.voice7",
+      "Icon": "Images/Actions/voice7",
+      "Tooltip": "Presses your binding for: ID_VOICE_MESSAGE_7",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/voice7", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Push to Talk",
+      "UUID": "com.blacksiroghost.wt.coms.ptt",
+      "Icon": "Images/Actions/ptt",
+      "Tooltip": "Presses your binding for: ID_PTT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ptt", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Squad Voice List",
+      "UUID": "com.blacksiroghost.wt.coms.voice_squad",
+      "Icon": "Images/Actions/voice_squad",
+      "Tooltip": "Presses your binding for: ID_SHOW_VOICE_MESSAGE_LIST_SQUAD",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/voice_squad", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Squad Designate",
+      "UUID": "com.blacksiroghost.wt.coms.squad_des",
+      "Icon": "Images/Actions/squad_des",
+      "Tooltip": "Presses your binding for: ID_SQUAD_TARGET_DESIGNATION",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/squad_des", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Support Plane",
+      "UUID": "com.blacksiroghost.wt.coms.support",
+      "Icon": "Images/Actions/support",
+      "Tooltip": "Presses your binding for: ID_START_SUPPORT_PLANE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/support", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Plane Orbit",
+      "UUID": "com.blacksiroghost.wt.coms.orbit",
+      "Icon": "Images/Actions/orbit",
+      "Tooltip": "Presses your binding for: ID_SUPPORT_PLANE_ORBITING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/orbit", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Wheel Menu",
+      "UUID": "com.blacksiroghost.wt.coms.wheel",
+      "Icon": "Images/Actions/wheel",
+      "Tooltip": "Presses your binding for: ID_SHOW_MULTIFUNC_WHEEL_MENU",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/wheel", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+﻿{
+  "Name": "WT - HUD & System",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - HUD & System - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - HUD & System",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.Hud.exe",
+  "CodePathWin": "WarThunderStreamDeck.Hud.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Hide HUD",
+      "UUID": "com.blacksiroghost.wt.hud.hide_hud",
+      "Icon": "Images/Actions/hide_hud",
+      "Tooltip": "Presses your binding for: ID_HIDE_HUD",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/hide_hud", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Pause",
+      "UUID": "com.blacksiroghost.wt.hud.pause",
+      "Icon": "Images/Actions/pause",
+      "Tooltip": "Presses your binding for: ID_GAME_PAUSE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/pause", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Screenshot",
+      "UUID": "com.blacksiroghost.wt.hud.screenshot",
+      "Icon": "Images/Actions/screenshot",
+      "Tooltip": "Presses your binding for: ID_SCREENSHOT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/screenshot", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Flight Menu",
+      "UUID": "com.blacksiroghost.wt.hud.flightmenu",
+      "Icon": "Images/Actions/flightmenu",
+      "Tooltip": "Presses your binding for: ID_FLIGHTMENU",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/flightmenu", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Flight Setup",
+      "UUID": "com.blacksiroghost.wt.hud.flightsetup",
+      "Icon": "Images/Actions/flightsetup",
+      "Tooltip": "Presses your binding for: ID_FLIGHTMENU_SETUP",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/flightsetup", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "MP Stat Screen",
+      "UUID": "com.blacksiroghost.wt.hud.mp_stat",
+      "Icon": "Images/Actions/mp_stat",
+      "Tooltip": "Presses your binding for: ID_MPSTATSCREEN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/mp_stat", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Instructor",
+      "UUID": "com.blacksiroghost.wt.hud.instructor",
+      "Icon": "Images/Actions/instructor",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_INSTRUCTOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/instructor", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Action Bar 5",
+      "UUID": "com.blacksiroghost.wt.hud.ab5",
+      "Icon": "Images/Actions/ab5",
+      "Tooltip": "Presses your binding for: ID_ACTION_BAR_ITEM_5",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ab5", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Action Bar 6",
+      "UUID": "com.blacksiroghost.wt.hud.ab6",
+      "Icon": "Images/Actions/ab6",
+      "Tooltip": "Presses your binding for: ID_ACTION_BAR_ITEM_6",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ab6", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Action Bar 7",
+      "UUID": "com.blacksiroghost.wt.hud.ab7",
+      "Icon": "Images/Actions/ab7",
+      "Tooltip": "Presses your binding for: ID_ACTION_BAR_ITEM_7",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ab7", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Action Bar 8",
+      "UUID": "com.blacksiroghost.wt.hud.ab8",
+      "Icon": "Images/Actions/ab8",
+      "Tooltip": "Presses your binding for: ID_ACTION_BAR_ITEM_8",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ab8", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Action Bar 9",
+      "UUID": "com.blacksiroghost.wt.hud.ab9",
+      "Icon": "Images/Actions/ab9",
+      "Tooltip": "Presses your binding for: ID_ACTION_BAR_ITEM_9",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ab9", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Continue",
+      "UUID": "com.blacksiroghost.wt.hud.continue",
+      "Icon": "Images/Actions/continue",
+      "Tooltip": "Presses your binding for: ID_CONTINUE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/continue", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Control Mode",
+      "UUID": "com.blacksiroghost.wt.hud.ctrl_mode",
+      "Icon": "Images/Actions/ctrl_mode",
+      "Tooltip": "Presses your binding for: ID_CONTROL_MODE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ctrl_mode", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Shot Frequency",
+      "UUID": "com.blacksiroghost.wt.hud.shot_freq",
+      "Icon": "Images/Actions/shot_freq",
+      "Tooltip": "Presses your binding for: ID_CHANGE_SHOT_FREQ",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/shot_freq", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Exit Cycle",
+      "UUID": "com.blacksiroghost.wt.hud.exit_cycle",
+      "Icon": "Images/Actions/exit_cycle",
+      "Tooltip": "Presses your binding for: ID_EXIT_SHOOTING_CYCLE_MODE",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/exit_cycle", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

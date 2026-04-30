@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>War Thunder Controls</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", sans-serif; margin: 0; padding: 12px; color: #d8d8d8; background: #2d2d2d; font-size: 12px; }
+    h2 { margin: 0 0 4px 0; font-size: 14px; }
+    h3 { margin: 18px 0 6px 0; font-size: 12px; color: #f0f0f0; border-bottom: 1px solid #444; padding-bottom: 4px; }
+    .row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+    .inline { flex-direction: row; gap: 6px; align-items: center; }
+    label { font-size: 11px; opacity: 0.85; }
+    input[type=text], select { padding: 6px; background: #1c1c1c; border: 1px solid #444; color: #e8e8e8; border-radius: 3px; font-family: monospace; font-size: 11px; flex: 1 1 auto; min-width: 0; }
+    button { padding: 6px 10px; background: #3d3d3d; border: 1px solid #555; color: #e8e8e8; border-radius: 3px; cursor: pointer; font-size: 11px; }
+    button:hover { background: #4a4a4a; }
+    button.primary { background: #2d5a8a; border-color: #4080c0; }
+    button.primary:hover { background: #366cb0; }
+    .status { margin-top: 6px; font-size: 10px; padding: 6px; background: #1f1f1f; border-radius: 3px; min-height: 1.2em; }
+    .ok { color: #6cd36c; }
+    .err { color: #f08080; }
+    .hint { font-size: 10px; opacity: 0.6; margin-top: 2px; }
+    .step-num { display: inline-block; width: 18px; height: 18px; line-height: 18px; text-align: center; background: #2d5a8a; color: white; border-radius: 50%; font-size: 10px; margin-right: 6px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <h2>War Thunder &mdash; Setup</h2>
+
+  <h3><span class="step-num">1</span>Controls file (.blk)</h3>
+  <div class="row">
+    <label for="path">Path to your <code>controls.blk</code> or <code>machine.blk</code> &mdash; shared by every War Thunder button.</label>
+    <input id="path" type="text" placeholder="%USERPROFILE%\Documents\My Games\WarThunder\Saves\last\production\machine.blk" />
+    <div class="hint">Default location: <code>Documents\My Games\WarThunder\Saves\last\production\machine.blk</code></div>
+  </div>
+  <div class="row inline">
+    <button id="save-path" class="primary">Save path</button>
+    <button id="discover">Use auto-detected</button>
+  </div>
+  <div id="path-status" class="status">&nbsp;</div>
+
+  <h3><span class="step-num">2</span>This button &mdash; fallback key</h3>
+  <div class="row">
+    <label for="fallback">If this action has no keyboard binding in your <code>.blk</code>, the plugin presses this key instead.</label>
+    <select id="fallback">
+      <option value="">(none &mdash; alert if unbound)</option>
+      <option>F13</option><option>F14</option><option>F15</option><option>F16</option>
+      <option>F17</option><option>F18</option><option>F19</option><option>F20</option>
+      <option>F21</option><option>F22</option><option>F23</option><option>F24</option>
+      <option>ScrollLock</option>
+      <option>Pause</option>
+    </select>
+    <div class="hint">After picking a key here, also bind it in War Thunder for the matching action.</div>
+  </div>
+  <div class="row inline">
+    <button id="save-fb" class="primary">Save fallback key</button>
+  </div>
+  <div id="fb-status" class="status">&nbsp;</div>
+
+<script>
+let websocket = null;
+let myUUID = null;
+let actionUUID = null;
+let actionInfo = null;
+
+function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, inActionInfo) {
+  myUUID = inUUID;
+  if (inActionInfo) {
+    try {
+      actionInfo = (typeof inActionInfo === 'string') ? JSON.parse(inActionInfo) : inActionInfo;
+      actionUUID = actionInfo.action;
+    } catch (e) {}
+  }
+  websocket = new WebSocket("ws://127.0.0.1:" + inPort);
+
+  websocket.onopen = () => {
+    websocket.send(JSON.stringify({ event: inRegisterEvent, uuid: inUUID }));
+    websocket.send(JSON.stringify({ event: "getGlobalSettings", context: inUUID }));
+    websocket.send(JSON.stringify({ event: "getSettings", context: inUUID }));
+  };
+
+  websocket.onmessage = (evt) => {
+    const data = JSON.parse(evt.data);
+    if (data.event === "didReceiveGlobalSettings") {
+      const s = data.payload?.settings || {};
+      document.getElementById("path").value = s.controlsBlkPath || "";
+      setPathStatus(s.controlsBlkPath ? "Saved." : "Empty &mdash; the plugin will try to auto-detect.", s.controlsBlkPath ? "ok" : "");
+    }
+    if (data.event === "didReceiveSettings") {
+      const s = data.payload?.settings || {};
+      document.getElementById("fallback").value = s.fallbackKey || "";
+    }
+  };
+}
+
+function setPathStatus(msg, kind) {
+  const el = document.getElementById("path-status");
+  el.className = "status " + (kind || "");
+  el.innerHTML = msg || "&nbsp;";
+}
+function setFbStatus(msg, kind) {
+  const el = document.getElementById("fb-status");
+  el.className = "status " + (kind || "");
+  el.innerHTML = msg || "&nbsp;";
+}
+
+document.getElementById("save-path").addEventListener("click", () => {
+  if (!websocket) return;
+  const path = document.getElementById("path").value.trim();
+  websocket.send(JSON.stringify({
+    event: "setGlobalSettings",
+    context: myUUID,
+    payload: { controlsBlkPath: path }
+  }));
+  setPathStatus(path ? "Saved. Buttons should activate within ~1 second." : "Cleared. The plugin will fall back to auto-discovery.", "ok");
+});
+
+document.getElementById("discover").addEventListener("click", () => {
+  if (!websocket) return;
+  // Empty string => plugin's resolver picks the highest-priority auto-discovered file.
+  websocket.send(JSON.stringify({
+    event: "setGlobalSettings",
+    context: myUUID,
+    payload: { controlsBlkPath: "" }
+  }));
+  document.getElementById("path").value = "";
+  setPathStatus("Cleared &mdash; the plugin will use the auto-detected path. Watch the deck buttons for live %.", "ok");
+});
+
+document.getElementById("save-fb").addEventListener("click", () => {
+  if (!websocket) return;
+  const fallbackKey = document.getElementById("fallback").value;
+  websocket.send(JSON.stringify({
+    event: "setSettings",
+    context: myUUID,
+    payload: { fallbackKey: fallbackKey || null }
+  }));
+  setFbStatus(fallbackKey
+    ? `Saved. Now bind <b>${fallbackKey}</b> in War Thunder for this action.`
+    : "Cleared. Press without a .blk binding will show an alert.",
+    "ok");
+});
+</script>
+</body>
+</html>
+

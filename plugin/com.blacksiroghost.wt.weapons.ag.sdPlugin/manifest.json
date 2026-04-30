@@ -1,0 +1,122 @@
+﻿{
+  "Name": "WT - Weapons A-G",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Weapons A-G - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Weapons A-G",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.WeaponsAg.exe",
+  "CodePathWin": "WarThunderStreamDeck.WeaponsAg.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Air-to-Ground Missile",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.agm",
+      "Icon": "Images/Actions/agm",
+      "Tooltip": "Presses your binding for: ID_AGM",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/agm", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "AGM Lock",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.agm_lock",
+      "Icon": "Images/Actions/agm_lock",
+      "Tooltip": "Presses your binding for: ID_AGM_LOCK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/agm_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "ATGM",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.atgm",
+      "Icon": "Images/Actions/atgm",
+      "Tooltip": "Presses your binding for: ID_ATGM",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/atgm", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Drop Bomb",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.bombs",
+      "Icon": "Images/Actions/bombs",
+      "Tooltip": "Presses your binding for: ID_BOMBS",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/bombs", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Bomb Series",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.bombs_series",
+      "Icon": "Images/Actions/bombs_series",
+      "Tooltip": "Presses your binding for: ID_BOMBS_SERIES",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/bombs_series", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Fire Rockets",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.rockets",
+      "Icon": "Images/Actions/rockets",
+      "Tooltip": "Presses your binding for: ID_ROCKETS",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/rockets", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Guided Bomb Lock",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.gbu_lock",
+      "Icon": "Images/Actions/gbu_lock",
+      "Tooltip": "Presses your binding for: ID_GUIDED_BOMBS_LOCK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/gbu_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Laser Designator",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.laser",
+      "Icon": "Images/Actions/laser",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_LASER_DESIGNATOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/laser", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Rocket Ballistics",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.rocket_bc",
+      "Icon": "Images/Actions/rocket_bc",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_ROCKETS_BALLISTIC_COMPUTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/rocket_bc", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Combined BC",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.bc",
+      "Icon": "Images/Actions/bc",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_CANNONS_AND_ROCKETS_BALLISTIC_COMPUTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/bc", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Designate Target",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.designate",
+      "Icon": "Images/Actions/designate",
+      "Tooltip": "Presses your binding for: ID_DESIGNATE_TARGET",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/designate", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Lock Point",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.lock_pt",
+      "Icon": "Images/Actions/lock_pt",
+      "Tooltip": "Presses your binding for: ID_LOCK_TARGETING_AT_POINT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/lock_pt", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Unlock Point",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.unlock_pt",
+      "Icon": "Images/Actions/unlock_pt",
+      "Tooltip": "Presses your binding for: ID_UNLOCK_TARGETING_AT_POINT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/unlock_pt", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

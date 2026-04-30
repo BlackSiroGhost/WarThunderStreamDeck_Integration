@@ -1,0 +1,114 @@
+﻿{
+  "Name": "WT - Heli Combat",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Heli Combat - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Heli Combat",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.HeliCombat.exe",
+  "CodePathWin": "WarThunderStreamDeck.HeliCombat.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Heli Fire Primary",
+      "UUID": "com.blacksiroghost.wt.heli.combat.fire_primary",
+      "Icon": "Images/Actions/fire_primary",
+      "Tooltip": "Presses your binding for: ID_FIRE_PRIMARY_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_primary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Fire Secondary",
+      "UUID": "com.blacksiroghost.wt.heli.combat.fire_secondary",
+      "Icon": "Images/Actions/fire_secondary",
+      "Tooltip": "Presses your binding for: ID_FIRE_SECONDARY_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_secondary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Fire MGuns",
+      "UUID": "com.blacksiroghost.wt.heli.combat.fire_mguns",
+      "Icon": "Images/Actions/fire_mguns",
+      "Tooltip": "Presses your binding for: ID_FIRE_MGUNS_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_mguns", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Fire Cannons",
+      "UUID": "com.blacksiroghost.wt.heli.combat.fire_cannons",
+      "Icon": "Images/Actions/fire_cannons",
+      "Tooltip": "Presses your binding for: ID_FIRE_CANNONS_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_cannons", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Fire Add Guns",
+      "UUID": "com.blacksiroghost.wt.heli.combat.fire_add_guns",
+      "Icon": "Images/Actions/fire_add_guns",
+      "Tooltip": "Presses your binding for: ID_FIRE_ADDITIONAL_GUNS_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_add_guns", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Flares",
+      "UUID": "com.blacksiroghost.wt.heli.combat.flares",
+      "Icon": "Images/Actions/flares",
+      "Tooltip": "Presses your binding for: ID_FLARES_SERIES_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/flares", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Rocket BC",
+      "UUID": "com.blacksiroghost.wt.heli.combat.rocket_bc",
+      "Icon": "Images/Actions/rocket_bc",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_ROCKETS_BALLISTIC_COMPUTER_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/rocket_bc", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Combined BC",
+      "UUID": "com.blacksiroghost.wt.heli.combat.bc",
+      "Icon": "Images/Actions/bc",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_CANNONS_AND_ROCKETS_BALLISTIC_COMPUTER_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/bc", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Cycle Primary",
+      "UUID": "com.blacksiroghost.wt.heli.combat.cycle_primary",
+      "Icon": "Images/Actions/cycle_primary",
+      "Tooltip": "Presses your binding for: ID_SWITCH_SHOOTING_CYCLE_PRIMARY_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cycle_primary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Cycle Sec",
+      "UUID": "com.blacksiroghost.wt.heli.combat.cycle_secondary",
+      "Icon": "Images/Actions/cycle_secondary",
+      "Tooltip": "Presses your binding for: ID_SWITCH_SHOOTING_CYCLE_SECONDARY_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cycle_secondary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Instructor",
+      "UUID": "com.blacksiroghost.wt.heli.combat.instructor",
+      "Icon": "Images/Actions/instructor",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_INSTRUCTOR_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/instructor", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Exit Cycle",
+      "UUID": "com.blacksiroghost.wt.heli.combat.exit_cycle",
+      "Icon": "Images/Actions/exit_cycle",
+      "Tooltip": "Presses your binding for: ID_EXIT_SHOOTING_CYCLE_MODE_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/exit_cycle", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

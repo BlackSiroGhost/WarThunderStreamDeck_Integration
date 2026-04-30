@@ -1,0 +1,98 @@
+﻿{
+  "Name": "WT - Tank Combat",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Tank Combat - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Tank Combat",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.TankCombat.exe",
+  "CodePathWin": "WarThunderStreamDeck.TankCombat.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Fire Secondary",
+      "UUID": "com.blacksiroghost.wt.tank.combat.fire_secondary",
+      "Icon": "Images/Actions/fire_secondary",
+      "Tooltip": "Presses your binding for: ID_FIRE_GM_SECONDARY_GUN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_secondary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Fire Special",
+      "UUID": "com.blacksiroghost.wt.tank.combat.fire_special",
+      "Icon": "Images/Actions/fire_special",
+      "Tooltip": "Presses your binding for: ID_FIRE_GM_SPECIAL_GUN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_special", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Select Primary",
+      "UUID": "com.blacksiroghost.wt.tank.combat.sel_primary",
+      "Icon": "Images/Actions/sel_primary",
+      "Tooltip": "Presses your binding for: ID_SELECT_GM_GUN_PRIMARY",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sel_primary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Select Secondary",
+      "UUID": "com.blacksiroghost.wt.tank.combat.sel_secondary",
+      "Icon": "Images/Actions/sel_secondary",
+      "Tooltip": "Presses your binding for: ID_SELECT_GM_GUN_SECONDARY",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sel_secondary", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Select MG",
+      "UUID": "com.blacksiroghost.wt.tank.combat.sel_mg",
+      "Icon": "Images/Actions/sel_mg",
+      "Tooltip": "Presses your binding for: ID_SELECT_GM_GUN_MACHINEGUN",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sel_mg", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Reset Selection",
+      "UUID": "com.blacksiroghost.wt.tank.combat.sel_reset",
+      "Icon": "Images/Actions/sel_reset",
+      "Tooltip": "Presses your binding for: ID_SELECT_GM_GUN_RESET",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sel_reset", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Smoke Screen",
+      "UUID": "com.blacksiroghost.wt.tank.combat.smoke",
+      "Icon": "Images/Actions/smoke",
+      "Tooltip": "Presses your binding for: ID_SMOKE_SCREEN_GENERATOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/smoke", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Repair",
+      "UUID": "com.blacksiroghost.wt.tank.combat.repair",
+      "Icon": "Images/Actions/repair",
+      "Tooltip": "Presses your binding for: ID_REPAIR_TANK",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/repair", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Hull Aiming",
+      "UUID": "com.blacksiroghost.wt.tank.combat.hull_aim",
+      "Icon": "Images/Actions/hull_aim",
+      "Tooltip": "Presses your binding for: ID_ENABLE_GM_HULL_AIMING",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/hull_aim", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Reload Guns",
+      "UUID": "com.blacksiroghost.wt.tank.combat.reload",
+      "Icon": "Images/Actions/reload",
+      "Tooltip": "Presses your binding for: ID_RELOAD_GUNS",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/reload", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

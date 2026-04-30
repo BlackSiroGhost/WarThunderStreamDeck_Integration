@@ -1,0 +1,106 @@
+﻿{
+  "Name": "WT - Heli Sensors",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Heli Sensors - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Heli Sensors",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.HeliSensors.exe",
+  "CodePathWin": "WarThunderStreamDeck.HeliSensors.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Heli Night Vision",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.night_vision",
+      "Icon": "Images/Actions/night_vision",
+      "Tooltip": "Presses your binding for: ID_HELI_GUNNER_NIGHT_VISION",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/night_vision", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Seeker Camera",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.seeker_cam",
+      "Icon": "Images/Actions/seeker_cam",
+      "Tooltip": "Presses your binding for: ID_CAMERA_SEEKER_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/seeker_cam", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Sensor Switch",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.sensor_switch",
+      "Icon": "Images/Actions/sensor_switch",
+      "Tooltip": "Presses your binding for: ID_SENSOR_SWITCH_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sensor_switch", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Sensor Lock",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.sensor_lock",
+      "Icon": "Images/Actions/sensor_lock",
+      "Tooltip": "Presses your binding for: ID_SENSOR_TARGET_LOCK_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/sensor_lock", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Laser",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.laser",
+      "Icon": "Images/Actions/laser",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_LASER_DESIGNATOR_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/laser", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Target Cam",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.tgt_cam",
+      "Icon": "Images/Actions/tgt_cam",
+      "Tooltip": "Presses your binding for: ID_TARGET_CAMERA_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/tgt_cam", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Lock Point",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.lock_pt",
+      "Icon": "Images/Actions/lock_pt",
+      "Tooltip": "Presses your binding for: ID_LOCK_TARGETING_AT_POINT_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/lock_pt", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Cue X +",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.cue_x_max",
+      "Icon": "Images/Actions/cue_x_max",
+      "Tooltip": "Presses your binding for: helicopter_sensor_cue_x_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_x_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Cue X -",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.cue_x_min",
+      "Icon": "Images/Actions/cue_x_min",
+      "Tooltip": "Presses your binding for: helicopter_sensor_cue_x_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_x_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Cue Y +",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.cue_y_max",
+      "Icon": "Images/Actions/cue_y_max",
+      "Tooltip": "Presses your binding for: helicopter_sensor_cue_y_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_y_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Cue Y -",
+      "UUID": "com.blacksiroghost.wt.heli.sensors.cue_y_min",
+      "Icon": "Images/Actions/cue_y_min",
+      "Tooltip": "Presses your binding for: helicopter_sensor_cue_y_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_y_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}

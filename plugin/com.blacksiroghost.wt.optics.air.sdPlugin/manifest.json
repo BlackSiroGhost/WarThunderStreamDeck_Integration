@@ -1,0 +1,146 @@
+﻿{
+  "Name": "WT - Optics Air",
+  "Version": "0.5.0",
+  "Author": "BlackSiroGhost",
+  "Description": "WT - Optics Air - War Thunder Stream Deck plugin (auto-generated).",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "WT - Optics Air",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeck.OpticsAir.exe",
+  "CodePathWin": "WarThunderStreamDeck.OpticsAir.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
+  "Actions": [
+    {
+      "Name": "Thermal Polarity",
+      "UUID": "com.blacksiroghost.wt.optics.air.thermal",
+      "Icon": "Images/Actions/thermal",
+      "Tooltip": "Presses your binding for: ID_THERMAL_WHITE_IS_HOT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/thermal", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Night Vision",
+      "UUID": "com.blacksiroghost.wt.optics.air.night_vision",
+      "Icon": "Images/Actions/night_vision",
+      "Tooltip": "Presses your binding for: ID_PLANE_NIGHT_VISION",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/night_vision", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Designate Target",
+      "UUID": "com.blacksiroghost.wt.optics.air.designate",
+      "Icon": "Images/Actions/designate",
+      "Tooltip": "Presses your binding for: ID_DESIGNATE_TARGET",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/designate", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Lock at Point",
+      "UUID": "com.blacksiroghost.wt.optics.air.lock_pt",
+      "Icon": "Images/Actions/lock_pt",
+      "Tooltip": "Presses your binding for: ID_LOCK_TARGETING_AT_POINT",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/lock_pt", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue X +",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_x_max",
+      "Icon": "Images/Actions/cue_x_max",
+      "Tooltip": "Presses your binding for: sensor_cue_x_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_x_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue X -",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_x_min",
+      "Icon": "Images/Actions/cue_x_min",
+      "Tooltip": "Presses your binding for: sensor_cue_x_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_x_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue X Center",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_x_set",
+      "Icon": "Images/Actions/cue_x_set",
+      "Tooltip": "Presses your binding for: sensor_cue_x_rangeSet",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_x_set", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue Y +",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_y_max",
+      "Icon": "Images/Actions/cue_y_max",
+      "Tooltip": "Presses your binding for: sensor_cue_y_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_y_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue Y -",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_y_min",
+      "Icon": "Images/Actions/cue_y_min",
+      "Tooltip": "Presses your binding for: sensor_cue_y_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_y_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue Y Center",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_y_set",
+      "Icon": "Images/Actions/cue_y_set",
+      "Tooltip": "Presses your binding for: sensor_cue_y_rangeSet",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_y_set", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue Z +",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_z_max",
+      "Icon": "Images/Actions/cue_z_max",
+      "Tooltip": "Presses your binding for: sensor_cue_z_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_z_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue Z -",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_z_min",
+      "Icon": "Images/Actions/cue_z_min",
+      "Tooltip": "Presses your binding for: sensor_cue_z_rangeMin",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_z_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Cue Z Center",
+      "UUID": "com.blacksiroghost.wt.optics.air.cue_z_set",
+      "Icon": "Images/Actions/cue_z_set",
+      "Tooltip": "Presses your binding for: sensor_cue_z_rangeSet",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/cue_z_set", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Laser Designator",
+      "UUID": "com.blacksiroghost.wt.optics.air.laser",
+      "Icon": "Images/Actions/laser",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_LASER_DESIGNATOR",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/laser", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Target Camera",
+      "UUID": "com.blacksiroghost.wt.optics.air.tgt_cam",
+      "Icon": "Images/Actions/tgt_cam",
+      "Tooltip": "Presses your binding for: ID_TARGET_CAMERA",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/tgt_cam", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "UAV Camera",
+      "UUID": "com.blacksiroghost.wt.optics.air.uav_cam",
+      "Icon": "Images/Actions/uav_cam",
+      "Tooltip": "Presses your binding for: ID_TOGGLE_UAV_CAMERA",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/uav_cam", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    }
+  ]
+}
