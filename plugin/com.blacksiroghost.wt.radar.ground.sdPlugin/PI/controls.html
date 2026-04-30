@@ -15,25 +15,29 @@
     button:hover { background: #4a4a4a; }
     button.primary { background: #2d5a8a; border-color: #4080c0; }
     button.primary:hover { background: #366cb0; }
+    button.success { background: #2d7a3a; border-color: #40a050; }
     .status { margin-top: 6px; font-size: 10px; padding: 6px; background: #1f1f1f; border-radius: 3px; min-height: 1.2em; }
     .ok { color: #6cd36c; }
     .err { color: #f08080; }
     .hint { font-size: 10px; opacity: 0.6; margin-top: 2px; }
     .step-num { display: inline-block; width: 18px; height: 18px; line-height: 18px; text-align: center; background: #2d5a8a; color: white; border-radius: 50%; font-size: 10px; margin-right: 6px; vertical-align: middle; }
+    .shared-tag { display: inline-block; background: #2d5a8a; color: white; padding: 2px 6px; border-radius: 8px; font-size: 9px; margin-left: 6px; }
   </style>
 </head>
 <body>
   <h2>War Thunder &mdash; Setup</h2>
 
-  <h3><span class="step-num">1</span>Controls file (.blk)</h3>
+  <h3><span class="step-num">1</span>Controls file (.blk) <span class="shared-tag">SHARED</span></h3>
   <div class="row">
-    <label for="path">Path to your <code>controls.blk</code> or <code>machine.blk</code> &mdash; shared by every War Thunder button.</label>
+    <label for="path">Path to your <code>controls.blk</code> or <code>machine.blk</code>. Set once &mdash; every War Thunder plugin you install reads this same path.</label>
     <input id="path" type="text" placeholder="%USERPROFILE%\Documents\My Games\WarThunder\Saves\last\production\machine.blk" />
     <div class="hint">Default location: <code>Documents\My Games\WarThunder\Saves\last\production\machine.blk</code></div>
   </div>
   <div class="row inline">
-    <button id="save-path" class="primary">Save path</button>
-    <button id="discover">Use auto-detected</button>
+    <button id="browse">Browse&hellip;</button>
+    <button id="test">Test</button>
+    <button id="save-path" class="primary">Save</button>
+    <button id="discover">Auto-detect</button>
   </div>
   <div id="path-status" class="status">&nbsp;</div>
 
@@ -81,12 +85,27 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
     const data = JSON.parse(evt.data);
     if (data.event === "didReceiveGlobalSettings") {
       const s = data.payload?.settings || {};
-      document.getElementById("path").value = s.controlsBlkPath || "";
-      setPathStatus(s.controlsBlkPath ? "Saved." : "Empty &mdash; the plugin will try to auto-detect.", s.controlsBlkPath ? "ok" : "");
+      if (!document.getElementById("path").value) {
+        document.getElementById("path").value = s.controlsBlkPath || "";
+      }
+      if (s.controlsBlkPath) setPathStatus("Saved.", "ok");
     }
     if (data.event === "didReceiveSettings") {
       const s = data.payload?.settings || {};
       document.getElementById("fallback").value = s.fallbackKey || "";
+    }
+    if (data.event === "sendToPropertyInspector") {
+      const p = data.payload || {};
+      if (p.type === "browseResult") {
+        document.getElementById("path").value = p.path;
+        setPathStatus("Picked: <code>" + p.path + "</code> &mdash; click <b>Test</b> or <b>Save</b>.", "ok");
+      } else if (p.type === "browseCancelled") {
+        setPathStatus("Browse cancelled.", "");
+      } else if (p.type === "testResult") {
+        setPathStatus(p.message, p.ok ? "ok" : "err");
+      } else if (p.type === "pathSaved") {
+        setPathStatus("Saved. All War Thunder plugins now use <code>" + (p.path || "(auto-detect)") + "</code>.", "ok");
+      }
     }
   };
 }
@@ -102,27 +121,49 @@ function setFbStatus(msg, kind) {
   el.innerHTML = msg || "&nbsp;";
 }
 
+function sendToPlugin(payload) {
+  if (!websocket || !actionUUID) return;
+  websocket.send(JSON.stringify({
+    action: actionUUID,
+    event: "sendToPlugin",
+    context: myUUID,
+    payload
+  }));
+}
+
+document.getElementById("browse").addEventListener("click", () => {
+  setPathStatus("Opening file picker&hellip;", "");
+  sendToPlugin({ type: "browse" });
+});
+
+document.getElementById("test").addEventListener("click", () => {
+  const path = document.getElementById("path").value.trim();
+  setPathStatus("Testing&hellip;", "");
+  sendToPlugin({ type: "test", path });
+});
+
 document.getElementById("save-path").addEventListener("click", () => {
   if (!websocket) return;
   const path = document.getElementById("path").value.trim();
+  // Write per-plugin global (Stream Deck-side) AND shared file (cross-plugin).
   websocket.send(JSON.stringify({
     event: "setGlobalSettings",
     context: myUUID,
     payload: { controlsBlkPath: path }
   }));
-  setPathStatus(path ? "Saved. Buttons should activate within ~1 second." : "Cleared. The plugin will fall back to auto-discovery.", "ok");
+  sendToPlugin({ type: "setPath", path });
 });
 
 document.getElementById("discover").addEventListener("click", () => {
   if (!websocket) return;
-  // Empty string => plugin's resolver picks the highest-priority auto-discovered file.
   websocket.send(JSON.stringify({
     event: "setGlobalSettings",
     context: myUUID,
     payload: { controlsBlkPath: "" }
   }));
+  sendToPlugin({ type: "setPath", path: "" });
   document.getElementById("path").value = "";
-  setPathStatus("Cleared &mdash; the plugin will use the auto-detected path. Watch the deck buttons for live %.", "ok");
+  setPathStatus("Cleared &mdash; the plugin will use the auto-detected path.", "ok");
 });
 
 document.getElementById("save-fb").addEventListener("click", () => {
@@ -141,6 +182,4 @@ document.getElementById("save-fb").addEventListener("click", () => {
 </script>
 </body>
 </html>
-
-
 

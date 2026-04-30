@@ -11,6 +11,14 @@
 *.sln.docstates
 *.env
 
+# Sensitive - never commit user controls files or credentials
+*.blk
+secrets/
+*.pfx
+*.p12
+*.pem
+*.key
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

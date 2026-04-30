@@ -1,8 +1,10 @@
 namespace WarThunderStreamDeckPlugin.Actions;
 
 using System;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 using SharpDeck;
 using SharpDeck.Events.Received;
 using WarThunderStreamDeckPlugin.Diagnostics;
@@ -82,9 +84,84 @@ public abstract class WarThunderBindingAction : StreamDeckAction
     {
         PluginLog.Info($"OnWillAppear action={GetType().Name}");
         UpdateFallbackFromSettings(args.Payload?.GetSettings<PerActionSettings>());
+        EnsureSharedConfigWatcher();
         await EnsureGlobalSettingsLoadedAsync().ConfigureAwait(false);
         StartWorker();
         StartPolling();
+    }
+
+    protected override async Task OnSendToPlugin(ActionEventArgs<JObject> args)
+    {
+        try
+        {
+            var payload = args.Payload ?? new JObject();
+            var type = payload["type"]?.ToString();
+            switch (type)
+            {
+                case "browse":
+                {
+                    var current = SharedConfig.Read().ControlsBlkPath ?? BindingsCache.Instance.CurrentPath;
+                    var picked = BlkFilePicker.Pick(current);
+                    if (!string.IsNullOrEmpty(picked))
+                        await SendToPropertyInspectorAsync(new { type = "browseResult", path = picked }).ConfigureAwait(false);
+                    else
+                        await SendToPropertyInspectorAsync(new { type = "browseCancelled" }).ConfigureAwait(false);
+                    break;
+                }
+                case "test":
+                {
+                    var path = payload["path"]?.ToString();
+                    var (ok, message) = TestBlkPath(path);
+                    await SendToPropertyInspectorAsync(new { type = "testResult", ok, message }).ConfigureAwait(false);
+                    break;
+                }
+                case "setPath":
+                {
+                    var path = payload["path"]?.ToString() ?? string.Empty;
+                    var p = SharedConfig.Read();
+                    p.ControlsBlkPath = path;
+                    SharedConfig.Write(p);
+                    await EnsureGlobalSettingsLoadedAsync().ConfigureAwait(false);
+                    await SendToPropertyInspectorAsync(new { type = "pathSaved", path }).ConfigureAwait(false);
+                    break;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            PluginLog.Error("OnSendToPlugin failed", ex);
+        }
+    }
+
+    private static (bool ok, string message) TestBlkPath(string? path)
+    {
+        var resolved = ControlsPathResolver.Resolve(path);
+        if (string.IsNullOrEmpty(resolved))
+            return (false, "Path is empty and auto-detect found no .blk.");
+        if (!File.Exists(resolved))
+            return (false, $"File not found: {resolved}");
+        try
+        {
+            var map = BlkParser.LoadFromFile(resolved);
+            if (map.Ids.Count == 0)
+                return (false, $"Parsed file but no bindings recognised. Path: {resolved}");
+            return (true, $"OK - {map.Ids.Count} bindings loaded from {resolved}");
+        }
+        catch (Exception ex)
+        {
+            return (false, $"Could not parse: {ex.Message}");
+        }
+    }
+
+    private static int _sharedWatcherStarted;
+    private void EnsureSharedConfigWatcher()
+    {
+        if (Interlocked.Exchange(ref _sharedWatcherStarted, 1) != 0) return;
+        SharedConfig.StartWatcher();
+        SharedConfig.Changed += () =>
+        {
+            try { _ = EnsureGlobalSettingsLoadedAsync(); } catch { }
+        };
     }
 
     protected override Task OnWillDisappear(ActionEventArgs<AppearancePayload> args)
@@ -216,25 +293,28 @@ public abstract class WarThunderBindingAction : StreamDeckAction
 
     private async Task EnsureGlobalSettingsLoadedAsync()
     {
-        if (StreamDeck is null)
-        {
-            PluginLog.Warn("EnsureGlobalSettingsLoadedAsync: StreamDeck connection is null");
-            return;
-        }
         try
         {
-            var settings = await StreamDeck.GetGlobalSettingsAsync<GlobalPluginSettings>().ConfigureAwait(false);
-            var resolved = ControlsPathResolver.Resolve(settings?.ControlsBlkPath);
+            // Priority: SharedConfig (cross-plugin) -> per-plugin global -> auto-detect.
+            var shared = SharedConfig.Read().ControlsBlkPath;
+            string? raw = shared;
+            if (string.IsNullOrWhiteSpace(raw) && StreamDeck is not null)
+            {
+                var settings = await StreamDeck.GetGlobalSettingsAsync<GlobalPluginSettings>().ConfigureAwait(false);
+                raw = settings?.ControlsBlkPath;
+            }
+
+            var resolved = ControlsPathResolver.Resolve(raw);
             var prev = BindingsCache.Instance.CurrentPath;
             BindingsCache.Instance.SetPath(resolved);
             if (!string.Equals(prev, resolved, StringComparison.OrdinalIgnoreCase))
             {
-                PluginLog.Info($"controls path resolved -> {resolved ?? "<none>"} (raw='{settings?.ControlsBlkPath ?? "<null>"}')");
+                PluginLog.Info($"controls path resolved -> {resolved ?? "<none>"} (raw='{raw ?? "<null>"}', source={(string.IsNullOrWhiteSpace(shared) ? "auto/per-plugin" : "shared")})");
             }
         }
         catch (Exception ex)
         {
-            PluginLog.Error("GetGlobalSettingsAsync threw", ex);
+            PluginLog.Error("EnsureGlobalSettingsLoadedAsync threw", ex);
         }
     }
 }
