@@ -114,3 +114,13 @@ public sealed class ReloadAction : WarThunderBindingAction
     protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
         => TryFireBindingAsync(b, "ID_RELOAD_GUNS");
 }
+
+[StreamDeckAction("com.blacksiroghost.wt.weapons.aa.fire_axis")]
+public sealed class FireAxisAction : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "FIRE";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "fire_rangeMax");
+}

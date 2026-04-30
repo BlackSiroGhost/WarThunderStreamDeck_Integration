@@ -101,6 +101,14 @@
       "Tooltip": "Presses your binding for: ID_RELOAD_GUNS",
       "PropertyInspectorPath": "PI/controls.html",
       "States": [ { "Image": "Images/Actions/reload", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Fire (Axis)",
+      "UUID": "com.blacksiroghost.wt.weapons.aa.fire_axis",
+      "Icon": "Images/Actions/fire_axis",
+      "Tooltip": "Presses your binding for: fire_rangeMax",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/fire_axis", "TitleAlignment": "bottom", "FontSize": "8" } ]
     }
   ]
 }

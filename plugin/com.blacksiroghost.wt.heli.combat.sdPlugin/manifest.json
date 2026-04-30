@@ -55,7 +55,23 @@
       "States": [ { "Image": "Images/Actions/fire_add_guns", "TitleAlignment": "bottom", "FontSize": "8" } ]
     },
     {
-      "Name": "Heli Flares",
+      "Name": "Heli Rocket Series",
+      "UUID": "com.blacksiroghost.wt.heli.combat.rockets_series",
+      "Icon": "Images/Actions/rockets_series",
+      "Tooltip": "Presses your binding for: ID_ROCKETS_SERIES_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/rockets_series", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Flare",
+      "UUID": "com.blacksiroghost.wt.heli.combat.flare_single",
+      "Icon": "Images/Actions/flare_single",
+      "Tooltip": "Presses your binding for: ID_FLARES_HELICOPTER",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/flare_single", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Heli Flare Series",
       "UUID": "com.blacksiroghost.wt.heli.combat.flares",
       "Icon": "Images/Actions/flares",
       "Tooltip": "Presses your binding for: ID_FLARES_SERIES_HELICOPTER",

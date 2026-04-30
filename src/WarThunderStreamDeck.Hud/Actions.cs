@@ -145,6 +145,16 @@ public sealed class CtrlModeAction : WarThunderBindingAction
         => TryFireBindingAsync(b, "ID_CONTROL_MODE");
 }
 
+[StreamDeckAction("com.blacksiroghost.wt.hud.ctrl_mode_uav")]
+public sealed class CtrlModeUavAction : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "UAV";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_CONTROL_MODE_HUMAN_UAV");
+}
+
 [StreamDeckAction("com.blacksiroghost.wt.hud.shot_freq")]
 public sealed class ShotFreqAction : WarThunderBindingAction
 {

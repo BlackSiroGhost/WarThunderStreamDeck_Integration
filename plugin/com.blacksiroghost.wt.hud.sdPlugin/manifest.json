@@ -127,6 +127,14 @@
       "States": [ { "Image": "Images/Actions/ctrl_mode", "TitleAlignment": "bottom", "FontSize": "8" } ]
     },
     {
+      "Name": "Control Mode UAV",
+      "UUID": "com.blacksiroghost.wt.hud.ctrl_mode_uav",
+      "Icon": "Images/Actions/ctrl_mode_uav",
+      "Tooltip": "Presses your binding for: ID_CONTROL_MODE_HUMAN_UAV",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/ctrl_mode_uav", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
       "Name": "Shot Frequency",
       "UUID": "com.blacksiroghost.wt.hud.shot_freq",
       "Icon": "Images/Actions/shot_freq",

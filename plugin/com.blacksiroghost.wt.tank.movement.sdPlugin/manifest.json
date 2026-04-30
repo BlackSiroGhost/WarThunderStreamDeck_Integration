@@ -77,38 +77,6 @@
       "Tooltip": "Presses your binding for: ID_SUSPENSION_RESET",
       "PropertyInspectorPath": "PI/controls.html",
       "States": [ { "Image": "Images/Actions/susp_reset", "TitleAlignment": "bottom", "FontSize": "8" } ]
-    },
-    {
-      "Name": "Steering Right",
-      "UUID": "com.blacksiroghost.wt.tank.movement.steer_max",
-      "Icon": "Images/Actions/steer_max",
-      "Tooltip": "Presses your binding for: gm_steering_rangeMax",
-      "PropertyInspectorPath": "PI/controls.html",
-      "States": [ { "Image": "Images/Actions/steer_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
-    },
-    {
-      "Name": "Steering Left",
-      "UUID": "com.blacksiroghost.wt.tank.movement.steer_min",
-      "Icon": "Images/Actions/steer_min",
-      "Tooltip": "Presses your binding for: gm_steering_rangeMin",
-      "PropertyInspectorPath": "PI/controls.html",
-      "States": [ { "Image": "Images/Actions/steer_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
-    },
-    {
-      "Name": "Throttle Max",
-      "UUID": "com.blacksiroghost.wt.tank.movement.thr_max",
-      "Icon": "Images/Actions/thr_max",
-      "Tooltip": "Presses your binding for: gm_throttle_rangeMax",
-      "PropertyInspectorPath": "PI/controls.html",
-      "States": [ { "Image": "Images/Actions/thr_max", "TitleAlignment": "bottom", "FontSize": "8" } ]
-    },
-    {
-      "Name": "Throttle Min",
-      "UUID": "com.blacksiroghost.wt.tank.movement.thr_min",
-      "Icon": "Images/Actions/thr_min",
-      "Tooltip": "Presses your binding for: gm_throttle_rangeMin",
-      "PropertyInspectorPath": "PI/controls.html",
-      "States": [ { "Image": "Images/Actions/thr_min", "TitleAlignment": "bottom", "FontSize": "8" } ]
     }
   ]
 }

@@ -55,10 +55,30 @@ public sealed class FireAddGunsAction : WarThunderBindingAction
         => TryFireBindingAsync(b, "ID_FIRE_ADDITIONAL_GUNS_HELICOPTER");
 }
 
+[StreamDeckAction("com.blacksiroghost.wt.heli.combat.rockets_series")]
+public sealed class RocketsSeriesAction : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "ROK^";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_ROCKETS_SERIES_HELICOPTER");
+}
+
+[StreamDeckAction("com.blacksiroghost.wt.heli.combat.flare_single")]
+public sealed class FlareSingleAction : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "FLR";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_FLARES_HELICOPTER");
+}
+
 [StreamDeckAction("com.blacksiroghost.wt.heli.combat.flares")]
 public sealed class FlaresAction : WarThunderBindingAction
 {
-    protected override string TitlePrefix => "FLR";
+    protected override string TitlePrefix => "FLR^";
     protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
         => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
     protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)

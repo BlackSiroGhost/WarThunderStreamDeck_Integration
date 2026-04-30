@@ -15,6 +15,14 @@
   "OS": [{ "Platform": "windows", "MinimumVersion": "10" }],
   "Actions": [
     {
+      "Name": "Voice Msg 1",
+      "UUID": "com.blacksiroghost.wt.coms.voice1",
+      "Icon": "Images/Actions/voice1",
+      "Tooltip": "Presses your binding for: ID_VOICE_MESSAGE_1",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/voice1", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
       "Name": "Voice Msg 2",
       "UUID": "com.blacksiroghost.wt.coms.voice2",
       "Icon": "Images/Actions/voice2",
@@ -23,12 +31,28 @@
       "States": [ { "Image": "Images/Actions/voice2", "TitleAlignment": "bottom", "FontSize": "8" } ]
     },
     {
+      "Name": "Voice Msg 5",
+      "UUID": "com.blacksiroghost.wt.coms.voice5",
+      "Icon": "Images/Actions/voice5",
+      "Tooltip": "Presses your binding for: ID_VOICE_MESSAGE_5",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/voice5", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
       "Name": "Voice Msg 7",
       "UUID": "com.blacksiroghost.wt.coms.voice7",
       "Icon": "Images/Actions/voice7",
       "Tooltip": "Presses your binding for: ID_VOICE_MESSAGE_7",
       "PropertyInspectorPath": "PI/controls.html",
       "States": [ { "Image": "Images/Actions/voice7", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Voice Msg 8",
+      "UUID": "com.blacksiroghost.wt.coms.voice8",
+      "Icon": "Images/Actions/voice8",
+      "Tooltip": "Presses your binding for: ID_VOICE_MESSAGE_8",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/voice8", "TitleAlignment": "bottom", "FontSize": "8" } ]
     },
     {
       "Name": "Push to Talk",

@@ -63,6 +63,22 @@
       "States": [ { "Image": "Images/Actions/rockets", "TitleAlignment": "bottom", "FontSize": "8" } ]
     },
     {
+      "Name": "Rocket Series",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.rockets_series",
+      "Icon": "Images/Actions/rockets_series",
+      "Tooltip": "Presses your binding for: ID_ROCKETS_SERIES",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/rockets_series", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
+      "Name": "Drop Guided Bomb",
+      "UUID": "com.blacksiroghost.wt.weapons.ag.gbu_drop",
+      "Icon": "Images/Actions/gbu_drop",
+      "Tooltip": "Presses your binding for: ID_GUIDED_BOMBS",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [ { "Image": "Images/Actions/gbu_drop", "TitleAlignment": "bottom", "FontSize": "8" } ]
+    },
+    {
       "Name": "Guided Bomb Lock",
       "UUID": "com.blacksiroghost.wt.weapons.ag.gbu_lock",
       "Icon": "Images/Actions/gbu_lock",

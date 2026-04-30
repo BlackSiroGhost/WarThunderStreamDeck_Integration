@@ -65,6 +65,26 @@ public sealed class RocketsAction : WarThunderBindingAction
         => TryFireBindingAsync(b, "ID_ROCKETS");
 }
 
+[StreamDeckAction("com.blacksiroghost.wt.weapons.ag.rockets_series")]
+public sealed class RocketsSeriesAction : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "ROK^";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_ROCKETS_SERIES");
+}
+
+[StreamDeckAction("com.blacksiroghost.wt.weapons.ag.gbu_drop")]
+public sealed class GbuDropAction : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "GBU";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_GUIDED_BOMBS");
+}
+
 [StreamDeckAction("com.blacksiroghost.wt.weapons.ag.gbu_lock")]
 public sealed class GbuLockAction : WarThunderBindingAction
 {

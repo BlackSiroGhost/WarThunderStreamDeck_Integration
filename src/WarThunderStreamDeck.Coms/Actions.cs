@@ -5,6 +5,16 @@ using SharpDeck;
 using WarThunderStreamDeckPlugin.KeyBindings;
 using WarThunderStreamDeckPlugin.Telemetry;
 
+[StreamDeckAction("com.blacksiroghost.wt.coms.voice1")]
+public sealed class Voice1Action : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "V1";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_VOICE_MESSAGE_1");
+}
+
 [StreamDeckAction("com.blacksiroghost.wt.coms.voice2")]
 public sealed class Voice2Action : WarThunderBindingAction
 {
@@ -15,6 +25,16 @@ public sealed class Voice2Action : WarThunderBindingAction
         => TryFireBindingAsync(b, "ID_VOICE_MESSAGE_2");
 }
 
+[StreamDeckAction("com.blacksiroghost.wt.coms.voice5")]
+public sealed class Voice5Action : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "V5";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_VOICE_MESSAGE_5");
+}
+
 [StreamDeckAction("com.blacksiroghost.wt.coms.voice7")]
 public sealed class Voice7Action : WarThunderBindingAction
 {
@@ -23,6 +43,16 @@ public sealed class Voice7Action : WarThunderBindingAction
         => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
     protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
         => TryFireBindingAsync(b, "ID_VOICE_MESSAGE_7");
+}
+
+[StreamDeckAction("com.blacksiroghost.wt.coms.voice8")]
+public sealed class Voice8Action : WarThunderBindingAction
+{
+    protected override string TitlePrefix => "V8";
+    protected override System.Threading.Tasks.Task<TelemetryReading?> ProbeAsync()
+        => System.Threading.Tasks.Task.FromResult<TelemetryReading?>(null);
+    protected override System.Threading.Tasks.Task OnPressAsync(BindingMap b)
+        => TryFireBindingAsync(b, "ID_VOICE_MESSAGE_8");
 }
 
 [StreamDeckAction("com.blacksiroghost.wt.coms.ptt")]

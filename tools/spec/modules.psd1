@@ -43,6 +43,7 @@
               @{ N='Cycle Primary';      U='cycle_primary'; T='Simple';   B=@('ID_SWITCH_SHOOTING_CYCLE_PRIMARY');            L='CYC1' }
               @{ N='Cycle Secondary';    U='cycle_secondary'; T='Simple'; B=@('ID_SWITCH_SHOOTING_CYCLE_SECONDARY');          L='CYC2' }
               @{ N='Reload Guns';        U='reload';       T='Simple';    B=@('ID_RELOAD_GUNS');                              L='RELD' }
+              @{ N='Fire (Axis)';        U='fire_axis';    T='Simple';    B=@('fire_rangeMax');                               L='FIRE' }
            )
         }
 
@@ -54,6 +55,8 @@
               @{ N='Drop Bomb';          U='bombs';        T='Simple';    B=@('ID_BOMBS');                                    L='BOMB' }
               @{ N='Bomb Series';        U='bombs_series'; T='Simple';    B=@('ID_BOMBS_SERIES');                             L='BMB^' }
               @{ N='Fire Rockets';       U='rockets';      T='Simple';    B=@('ID_ROCKETS');                                  L='ROCK' }
+              @{ N='Rocket Series';      U='rockets_series'; T='Simple';  B=@('ID_ROCKETS_SERIES');                           L='ROK^' }
+              @{ N='Drop Guided Bomb';   U='gbu_drop';     T='Simple';    B=@('ID_GUIDED_BOMBS');                             L='GBU' }
               @{ N='Guided Bomb Lock';   U='gbu_lock';     T='Simple';    B=@('ID_GUIDED_BOMBS_LOCK');                        L='GBUL' }
               @{ N='Laser Designator';   U='laser';        T='Simple';    B=@('ID_TOGGLE_LASER_DESIGNATOR');                  L='LASER' }
               @{ N='Rocket Ballistics';  U='rocket_bc';    T='Simple';    B=@('ID_TOGGLE_ROCKETS_BALLISTIC_COMPUTER');        L='RBC' }
@@ -114,14 +117,6 @@
               @{ N='Heli Flaps Up';      U='flaps_up';     T='Simple';    B=@('ID_FLAPS_UP_HELICOPTER');                      L='FLP+' }
               @{ N='Heli Flaps Down';    U='flaps_down';   T='Simple';    B=@('ID_FLAPS_DOWN_HELICOPTER');                    L='FLP-' }
               @{ N='Heli Air Brake';     U='airbrake';     T='Simple';    B=@('ID_AIR_BRAKE_HELICOPTER');                     L='AIRB' }
-              @{ N='Collective Max';     U='coll_max';     T='Simple';    B=@('helicopter_collective_rangeMax');              L='COL+' }
-              @{ N='Collective Min';     U='coll_min';     T='Simple';    B=@('helicopter_collective_rangeMin');              L='COL-' }
-              @{ N='Pedals Right';       U='pedal_max';    T='Simple';    B=@('helicopter_pedals_rangeMax');                  L='PED>' }
-              @{ N='Pedals Left';        U='pedal_min';    T='Simple';    B=@('helicopter_pedals_rangeMin');                  L='<PED' }
-              @{ N='Cyclic Pitch +';     U='cpitch_max';   T='Simple';    B=@('helicopter_cyclic_pitch_rangeMax');            L='PIT+' }
-              @{ N='Cyclic Pitch -';     U='cpitch_min';   T='Simple';    B=@('helicopter_cyclic_pitch_rangeMin');            L='PIT-' }
-              @{ N='Cyclic Roll +';      U='croll_max';    T='Simple';    B=@('helicopter_cyclic_roll_rangeMax');             L='ROL+' }
-              @{ N='Cyclic Roll -';      U='croll_min';    T='Simple';    B=@('helicopter_cyclic_roll_rangeMin');             L='ROL-' }
            )
         }
 
@@ -132,7 +127,9 @@
               @{ N='Heli Fire MGuns';    U='fire_mguns';   T='Simple';    B=@('ID_FIRE_MGUNS_HELICOPTER');                    L='MGUN' }
               @{ N='Heli Fire Cannons';  U='fire_cannons'; T='Simple';    B=@('ID_FIRE_CANNONS_HELICOPTER');                  L='CANN' }
               @{ N='Heli Fire Add Guns'; U='fire_add_guns'; T='Simple';   B=@('ID_FIRE_ADDITIONAL_GUNS_HELICOPTER');          L='ADDG' }
-              @{ N='Heli Flares';        U='flares';       T='Simple';    B=@('ID_FLARES_SERIES_HELICOPTER');                 L='FLR' }
+              @{ N='Heli Rocket Series'; U='rockets_series'; T='Simple';  B=@('ID_ROCKETS_SERIES_HELICOPTER');                L='ROK^' }
+              @{ N='Heli Flare';         U='flare_single'; T='Simple';    B=@('ID_FLARES_HELICOPTER');                        L='FLR' }
+              @{ N='Heli Flare Series';  U='flares';       T='Simple';    B=@('ID_FLARES_SERIES_HELICOPTER');                 L='FLR^' }
               @{ N='Heli Rocket BC';     U='rocket_bc';    T='Simple';    B=@('ID_TOGGLE_ROCKETS_BALLISTIC_COMPUTER_HELICOPTER'); L='RBC' }
               @{ N='Heli Combined BC';   U='bc';           T='Simple';    B=@('ID_TOGGLE_CANNONS_AND_ROCKETS_BALLISTIC_COMPUTER_HELICOPTER'); L='BC' }
               @{ N='Heli Cycle Primary'; U='cycle_primary'; T='Simple';   B=@('ID_SWITCH_SHOOTING_CYCLE_PRIMARY_HELICOPTER'); L='CYC1' }
@@ -168,10 +165,6 @@
               @{ N='Roll Right';         U='susp_rol_up';  T='Simple';    B=@('ID_SUSPENSION_ROLL_UP');                       L='ROL>' }
               @{ N='Roll Left';          U='susp_rol_dn';  T='Simple';    B=@('ID_SUSPENSION_ROLL_DOWN');                     L='<ROL' }
               @{ N='Suspension Reset';   U='susp_reset';   T='Simple';    B=@('ID_SUSPENSION_RESET');                         L='RST' }
-              @{ N='Steering Right';     U='steer_max';    T='Simple';    B=@('gm_steering_rangeMax');                        L='STR>' }
-              @{ N='Steering Left';      U='steer_min';    T='Simple';    B=@('gm_steering_rangeMin');                        L='<STR' }
-              @{ N='Throttle Max';       U='thr_max';      T='Simple';    B=@('gm_throttle_rangeMax');                        L='THR+' }
-              @{ N='Throttle Min';       U='thr_min';      T='Simple';    B=@('gm_throttle_rangeMin');                        L='THR-' }
            )
         }
 
@@ -245,8 +238,11 @@
 
         @{ Id='coms'; Asm='Coms'; Cat='WT - Comms'; Accent=@(80,112,208);
            Actions=@(
+              @{ N='Voice Msg 1';        U='voice1';       T='Simple';    B=@('ID_VOICE_MESSAGE_1');                          L='V1' }
               @{ N='Voice Msg 2';        U='voice2';       T='Simple';    B=@('ID_VOICE_MESSAGE_2');                          L='V2' }
+              @{ N='Voice Msg 5';        U='voice5';       T='Simple';    B=@('ID_VOICE_MESSAGE_5');                          L='V5' }
               @{ N='Voice Msg 7';        U='voice7';       T='Simple';    B=@('ID_VOICE_MESSAGE_7');                          L='V7' }
+              @{ N='Voice Msg 8';        U='voice8';       T='Simple';    B=@('ID_VOICE_MESSAGE_8');                          L='V8' }
               @{ N='Push to Talk';       U='ptt';          T='Simple';    B=@('ID_PTT');                                      L='PTT' }
               @{ N='Squad Voice List';   U='voice_squad';  T='Simple';    B=@('ID_SHOW_VOICE_MESSAGE_LIST_SQUAD');            L='SQDV' }
               @{ N='Squad Designate';    U='squad_des';    T='Simple';    B=@('ID_SQUAD_TARGET_DESIGNATION');                 L='SQDD' }
@@ -272,6 +268,7 @@
               @{ N='Action Bar 9';       U='ab9';          T='Simple';    B=@('ID_ACTION_BAR_ITEM_9');                        L='AB9' }
               @{ N='Continue';           U='continue';     T='Simple';    B=@('ID_CONTINUE');                                 L='CONT' }
               @{ N='Control Mode';       U='ctrl_mode';    T='Simple';    B=@('ID_CONTROL_MODE');                             L='CTRL' }
+              @{ N='Control Mode UAV';   U='ctrl_mode_uav'; T='Simple';   B=@('ID_CONTROL_MODE_HUMAN_UAV');                   L='UAV' }
               @{ N='Shot Frequency';     U='shot_freq';    T='Simple';    B=@('ID_CHANGE_SHOT_FREQ');                         L='FREQ' }
               @{ N='Exit Cycle';         U='exit_cycle';   T='Simple';    B=@('ID_EXIT_SHOOTING_CYCLE_MODE');                 L='EXIT' }
            )
