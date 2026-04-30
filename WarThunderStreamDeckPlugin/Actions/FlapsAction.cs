@@ -1,30 +1,19 @@
 namespace WarThunderStreamDeckPlugin.Actions;
 
+using System.Threading.Tasks;
 using SharpDeck;
-using SharpDeck.Events.Received;
-using WarThunderStreamDeckPlugin.Services;
+using WarThunderStreamDeckPlugin.Telemetry;
 
-[StreamDeckAction("com.myplugin.wtflaps.toggle")]
-public class FlapsAction : WarThunderActionBase
+[StreamDeckAction("com.blacksiroghost.warthunder.flaps")]
+public sealed class FlapsAction : WarThunderBindingAction
 {
-    public FlapsAction() : base() { }
+    protected override string PrimaryBindingId => "ID_FLAPS";
 
-    public override string ActionUuid => "com.myplugin.wtflaps.toggle";
-    public override string DisplayName => "Flaps Toggle";
-    public override string BindingName => "flaps";
+    protected override string[] FallbackBindingIds { get; } = { "ID_FLAPS_DOWN", "ID_FLAPS_UP" };
 
-    protected override async Task OnKeyDown(ActionEventArgs<KeyPayload> args)
+    protected override async Task<int?> ProbeStateAsync(IWarThunderTelemetry telemetry)
     {
-        var vk = KeyBindingProvider.GetVirtualKeyForAction(BindingName, ResolveControlsPath(args));
-        Keyboard.PressVirtualKey(vk ?? (byte)'F');
-
-        var flaps = await StateService.GetFlapsExtendedAsync();
-        await SetStateAsync(flaps == true ? 1 : 0);
-    }
-
-    protected override async Task OnWillAppear(ActionEventArgs<AppearancePayload> args)
-    {
-        var flaps = await StateService.GetFlapsExtendedAsync();
-        await SetStateAsync(flaps == true ? 1 : 0);
+        var pct = await telemetry.GetFlapsPercentAsync().ConfigureAwait(false);
+        return pct is null ? null : pct > 5 ? 1 : 0;
     }
 }

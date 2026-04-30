@@ -1,0 +1,47 @@
+{
+  "Name": "War Thunder Controls",
+  "Version": "0.2.0",
+  "Author": "BlackSiroGhost",
+  "Description": "Drives War Thunder cockpit toggles (gear, flaps, ...) from your Stream Deck. Reads your existing controls .blk so the buttons press the same key you've already bound.",
+  "URL": "https://github.com/BlackSiroGhost/WarThunderStreamDeck_Integration",
+  "Icon": "Images/Plugin/pluginIcon",
+  "Category": "War Thunder",
+  "CategoryIcon": "Images/Plugin/categoryIcon",
+  "CodePath": "WarThunderStreamDeckPlugin.exe",
+  "CodePathWin": "WarThunderStreamDeckPlugin.exe",
+  "PropertyInspectorPath": "PI/controls.html",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.5"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Actions": [
+    {
+      "Name": "Toggle Gear",
+      "UUID": "com.blacksiroghost.warthunder.gear",
+      "Icon": "Images/Actions/gear",
+      "Tooltip": "Toggle landing gear (presses your ID_GEAR binding).",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [
+        { "Image": "Images/Actions/gear_up",   "TitleAlignment": "bottom", "FontSize": "8" },
+        { "Image": "Images/Actions/gear_down", "TitleAlignment": "bottom", "FontSize": "8" }
+      ]
+    },
+    {
+      "Name": "Toggle Flaps",
+      "UUID": "com.blacksiroghost.warthunder.flaps",
+      "Icon": "Images/Actions/flaps",
+      "Tooltip": "Toggle flaps (presses ID_FLAPS, falls back to ID_FLAPS_DOWN/UP).",
+      "PropertyInspectorPath": "PI/controls.html",
+      "States": [
+        { "Image": "Images/Actions/flaps_up",   "TitleAlignment": "bottom", "FontSize": "8" },
+        { "Image": "Images/Actions/flaps_down", "TitleAlignment": "bottom", "FontSize": "8" }
+      ]
+    }
+  ]
+}

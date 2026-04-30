@@ -1,30 +1,17 @@
 namespace WarThunderStreamDeckPlugin.Actions;
 
+using System.Threading.Tasks;
 using SharpDeck;
-using SharpDeck.Events.Received;
-using WarThunderStreamDeckPlugin.Services;
+using WarThunderStreamDeckPlugin.Telemetry;
 
-[StreamDeckAction("com.myplugin.wtgear.toggle")]
-public class GearAction : WarThunderActionBase
+[StreamDeckAction("com.blacksiroghost.warthunder.gear")]
+public sealed class GearAction : WarThunderBindingAction
 {
-    public GearAction() : base() { }
+    protected override string PrimaryBindingId => "ID_GEAR";
 
-    public override string ActionUuid => "com.myplugin.wtgear.toggle";
-    public override string DisplayName => "Gear Toggle";
-    public override string BindingName => "gear";
-
-    protected override async Task OnKeyDown(ActionEventArgs<KeyPayload> args)
+    protected override async Task<int?> ProbeStateAsync(IWarThunderTelemetry telemetry)
     {
-        var vk = KeyBindingProvider.GetVirtualKeyForAction(BindingName, ResolveControlsPath(args));
-        Keyboard.PressVirtualKey(vk ?? (byte)'G');
-
-        var gearDown = await StateService.GetGearDownAsync();
-        await SetStateAsync(gearDown == true ? 1 : 0);
-    }
-
-    protected override async Task OnWillAppear(ActionEventArgs<AppearancePayload> args)
-    {
-        var gearDown = await StateService.GetGearDownAsync();
-        await SetStateAsync(gearDown == true ? 1 : 0);
+        var pct = await telemetry.GetGearPercentAsync().ConfigureAwait(false);
+        return pct is null ? null : pct > 50 ? 1 : 0;
     }
 }
